@@ -4,8 +4,8 @@ import { createHmac } from 'crypto';
 // In production, use a database instead
 let webhookEvents = [];
 
-// Replace with your actual signing key from Periskope
-const SHARED_SECRET = "YOUR_SIGNING_SECRET";
+// Get signing key from environment variable
+const SHARED_SECRET = process.env.PERISKOPE_SIGNING_SECRET;
 
 /**
  * Verify the signature from Periskope
